@@ -2,13 +2,18 @@ doctype
 html(lang='en')
     head
         meta(charset='utf-8')
-        title Noom
+        title PC
         link(rel="stylesheet" href="https://unpkg.com/mvp.css") 
     body
         header
-            h1 Noom
+            h1 Private chat
         main
-            h3 Welcome to Noom
+            form
+                input(type='text', placeholder="Choose a nickname", required)
+                button Save
+            ul
+            form
+                input(type='text', placeholder="write a msg", required)
+                button Send
+            h3 Welcome to Private chat
         script(src="/public/js/app.js")
-
-        
