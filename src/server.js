@@ -29,6 +29,10 @@ wsServer.on("connection", (socket) => {
   socket.on("disconnecting", () => {
     socket.rooms.forEach((room) => socket.to(room).emit("bye"))
   })
+  socket.on("new_message", (msg, roomName, done) => {
+    socket.to(roomName).emit("new_message", ` ${msg}`)
+    done()
+  })
 })
 
 // const wss = new WebSocket.Server({ server })
